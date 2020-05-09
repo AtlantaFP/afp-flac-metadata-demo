@@ -6,8 +6,10 @@
   :components ((:module "src"
 		:serial t
                 :components
-                ((:file "buffer")
+                ((:file "buffer")	       
 		 (:file "read-primitives")
+		 (:file "block-stream")
+		 (:file "metadata")
 		 (:file "main"))))
   :description ""
   :in-order-to ((test-op (test-op "flac-metadata-demo/tests"))))

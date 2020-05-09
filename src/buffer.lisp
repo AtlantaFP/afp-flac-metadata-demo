@@ -19,10 +19,10 @@
   (fast-io:fast-read-sequence bit-sequence buffer start end))
 
 (defclass buffer ()
-  ((bytes :initargs :bytes)
-   (bits :initargs :bits)
-   (stream :initargs :stream)
-   (sequence :initargs :sequence)))
+  ((bytes :initarg :bytes)
+   (bits :initarg :bits)
+   (stream :initarg :stream)
+   (sequence :initarg :sequence)))
 
 (defun buffer-bytes ()
   (slot-value *buffer* 'bytes))
@@ -48,4 +48,4 @@
 		       :bits ,bits
 		       :stream (fast-io:input-buffer-stream ,bytes)
 		       :sequence (fast-io:input-buffer-vector ,bytes))))
-p       ,@body)))
+       ,@body)))

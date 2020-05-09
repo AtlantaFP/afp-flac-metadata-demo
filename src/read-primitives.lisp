@@ -1,6 +1,12 @@
 (defpackage fmd-primitives-readers
   (:use :cl :fmd)
   (:local-nicknames (:a :alexandria))
+  (:export
+   #:read-bytes
+   #:read-bits
+   #:read-uint-be
+   #:read-uint-le
+   #:read-string)
   (:nicknames :fmd-prim))
 
 (in-package :fmd-primitives-readers)
