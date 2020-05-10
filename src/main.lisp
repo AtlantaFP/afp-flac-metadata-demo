@@ -12,7 +12,7 @@
       ;; each part of the flac stream will be its own class starting with
       ;; the stream.
       (setf (parse-tree flac-metadata) (parse-stream))
-      )))
+      flac-metadata)))
 
 (defun read-flac-file (file-path)
   (with-open-file (strm file-path :element-type '(unsigned-byte 8))
