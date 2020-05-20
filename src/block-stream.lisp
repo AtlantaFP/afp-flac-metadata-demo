@@ -19,7 +19,7 @@
 (defun parse-stream ()
   (let ((flac-data (make-instance 'block-stream)))
     (setf (stream-marker flac-data) (parse-magic-string))
-    (destructuring-bind (streaminfo &rest metadata-blocks) (parse-metadata-block)
+    (destructuring-bind (streaminfo &rest metadata-blocks) (parse-metadata-blocks)
       (setf (stream-info flac-data) streaminfo
 	    (metadata flac-data) metadata-blocks
 	    (frames flac-data) nil))
