@@ -2,7 +2,7 @@
   :version "0.1.0"
   :author ""
   :license ""
-  :depends-on ("alexandria" "fast-io" "bitio" "babel")
+  :depends-on ("alexandria" "fast-io" "bitio" "babel" "ltk")
   :components ((:module "src"
 		:serial t
                 :components
